@@ -450,6 +450,8 @@ final class QueueTest extends TestCase
 
         $this->assertSameMessage($messages[0], $message);
 
+        sleep(1);
+
         $this->queue->requeue($message->withEarliestGet(new UTCDateTime((int)(microtime(true) * 1000))));
 
         $actual = $this->queue->get([], ['maxNumberOfMessages' => 10]);
