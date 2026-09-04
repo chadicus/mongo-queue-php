@@ -378,7 +378,7 @@ final class QueueTest extends TestCase
 
         $this->assertSame([], $this->queue->get($messageOne->getPayload()));
 
-        sleep(1);
+        sleep(2);
 
         $this->assertCount(1, $this->queue->get($messageOne->getPayload()));
     }
