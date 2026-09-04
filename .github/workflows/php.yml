@@ -19,6 +19,8 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-versions }}
+        extensions: mongodb-1.15.0
+
     - name: Install MongoDB
       uses: supercharge/mongodb-github-action@1.8.0
       with:
